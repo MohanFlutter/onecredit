@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localstorage/localstorage.dart';
 
 import 'package:onecredit/Commonwidget/Colors.dart' as Custom_color;
 import 'package:onecredit/LoginWidget/Loginpage.dart';
@@ -14,6 +15,9 @@ class AddCustomer extends StatefulWidget {
 class _AddCustomerState extends State<AddCustomer> {
 
 
+  final LocalStorage storage = new LocalStorage('onecredit_store');
+
+
 
   int professionselectedValue = 0;
 
@@ -25,6 +29,48 @@ class _AddCustomerState extends State<AddCustomer> {
 
 
   TextEditingController cusname = TextEditingController();
+
+
+var boolvalue;
+
+var finalbool;
+
+
+
+ThemeData _lightTheme = ThemeData(
+  primarySwatch: Colors.blue,
+  brightness: Brightness.light,
+  buttonTheme: const ButtonThemeData(buttonColor: Color.fromARGB(255, 4, 19, 99))
+);
+
+ThemeData _darkTheme = ThemeData(
+  primarySwatch: Colors.red,
+  brightness: Brightness.dark,
+  
+
+);
+
+
+
+
+    @override
+  void initState(){
+
+    super.initState();
+    boolvalue=storage.getItem('bool_value');
+
+    setState(() {
+      finalbool = boolvalue==null? false : boolvalue;
+    });
+
+  }
+
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
 
@@ -32,8 +78,14 @@ class _AddCustomerState extends State<AddCustomer> {
     double height = MediaQuery.of(context).size.height;
 
 
-    return SafeArea(
-      child: Scaffold(
+    return MaterialApp(
+
+      debugShowCheckedModeBanner: false,
+
+      theme: finalbool ? _darkTheme : _lightTheme,
+
+
+      home: Scaffold(
         appBar: AppBar(
     
           leading: IconButton(onPressed: (){
