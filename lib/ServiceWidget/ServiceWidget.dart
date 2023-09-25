@@ -155,7 +155,7 @@ ThemeData _darkTheme = ThemeData(
                         children: [
                           Container(
 
-                            height: height*0.25,
+                            height: height*0.28,
                                     width: width*0.35,
 
                             child: Column(
@@ -164,7 +164,7 @@ ThemeData _darkTheme = ThemeData(
                                   padding: const EdgeInsets.only(left:8.0,top: 8),
                                   child: Container(
                                     height: height*0.15,
-                                    width: width*0.3,
+                                    width: width*0.35,
                                     // color: Colors.red,
                                     decoration: BoxDecoration(
                                       image: DecorationImage(image: AssetImage('assets/men.jpg'),fit: BoxFit.fill)
@@ -173,9 +173,10 @@ ThemeData _darkTheme = ThemeData(
                                 ),
                                 SizedBox(height: 3,),
                                 Flexible(child: Padding(
-                                  padding: const EdgeInsets.only(left:8.0),
-                                  child: Text('Mohana Sundaram',style: TextStyle(fontWeight: FontWeight.bold),),
+                                  padding: const EdgeInsets.only(left:12.0),
+                                  child: Text('Mohanafffsdfsffefefewffefef',style: TextStyle(fontWeight: FontWeight.bold),),
                                 )),
+                                // SizedBox(height: 1,),
 
 
                                 TextButton(onPressed: (){

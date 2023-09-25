@@ -124,7 +124,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -207,7 +207,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -251,7 +251,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -295,7 +295,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -340,7 +340,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -422,7 +422,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -556,7 +556,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -601,7 +601,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,
@@ -647,7 +647,7 @@ ThemeData _darkTheme = ThemeData(
           
                     SizedBox(width: 14,),
                     Container(
-                      width: width*0.6,
+                      width: width*0.57,
                     
                       // height: height*0.06,
                       // color: Colors.black,

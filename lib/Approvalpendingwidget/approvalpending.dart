@@ -106,8 +106,8 @@ ThemeData _darkTheme = ThemeData(
 
                                                       
 
-                                                        Color.fromARGB(255, 186, 182, 182),
-                                                       
+                                                        Color.fromARGB(255, 112, 109, 109),                   
+                                                                                            
                                                         borderRadius: BorderRadius.only(
                                                             topLeft: Radius.circular(10),
                                                             topRight: Radius.circular(10),
@@ -179,8 +179,8 @@ ThemeData _darkTheme = ThemeData(
                                                 NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 2, // Number of columns in the grid
-      crossAxisSpacing: 10.0, // Spacing between columns
-      mainAxisSpacing: 10.0, // Spacing between rows
+      // crossAxisSpacing: 5.0, // Spacing between columns
+      // mainAxisSpacing: 5.0, // Spacing between rows
       ),
       itemCount: 6,
       itemBuilder: (BuildContext context, int index) {
@@ -189,8 +189,10 @@ ThemeData _darkTheme = ThemeData(
       return Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: height*0.15,
-          width: width*0.25,
+
+          
+          height: height*0.18,
+          width: width*0.23,
     
           decoration:
 
@@ -249,9 +251,9 @@ ThemeData _darkTheme = ThemeData(
     
                       child: Column(
                         children: [
-                          SizedBox(height: 2,),
+                          // SizedBox(height: 2,),
                           Container(
-                            height: height*0.14,
+                            height: height*0.13,
                             // color: Colors.red,
                             decoration: BoxDecoration(
                               image: DecorationImage(image: AssetImage('assets/second.jpg'),fit: BoxFit.fill)

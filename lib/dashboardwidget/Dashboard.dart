@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
+import 'package:onecredit/AccountsWidget/Accountspage.dart';
 import 'package:onecredit/AddcustomerWidget/Addcustomer.dart';
 import 'package:onecredit/Approvalpendingwidget/approvalpending.dart';
 import 'package:onecredit/Customerlistwidget/customerlist.dart';
@@ -204,321 +205,325 @@ ThemeData _darkTheme = ThemeData(
             ],
           ),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left:12.0),
+              child: Row(
+                children: [
+                  Text("Welcome Madhan"),
+                ],
+              ),
+            ),
+            Container(
+              child: Padding(
                 padding: const EdgeInsets.only(left:12.0),
                 child: Row(
                   children: [
-                    Text("Welcome Madhan"),
+                    Container(
+                      height: screenHeight*0.15,
+                      width: screenWidth*0.31,
+                      color: Color.fromARGB(255, 61, 64, 73),
+                      child: Column(
+                        children: [
+                          // SizedBox(
+                          //   height: screenHeight*0.04,
+                          // ),
+                          Icon(Icons.person_2_rounded,size: 40,color: Colors.white,),
+                          Text("20",style: TextStyle(color: Colors.white),),
+                          Text('Total',style: TextStyle(color: Colors.white),),
+                          Text('Customers',style: TextStyle(color: Colors.white),)
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: screenHeight*0.15,
+                      width: screenWidth*0.31,
+                      color: Color.fromARGB(255, 61, 64, 73),
+                       child: Column(
+                        children: [
+                          // SizedBox(
+                          //   height: screenHeight*0.04,
+                          // ),
+                          Icon(Icons.person_2_rounded,size: 40,color: Colors.green,),
+                          Text("20",style: TextStyle(color: Colors.white),),
+                                                      Text('Active',style: TextStyle(color: Colors.white),),
+                          Text('Customers',style: TextStyle(color: Colors.white),)
+
+                        ],
+                      ),
+                
+                    ),
+                    Container(
+                      height: screenHeight*0.15,
+                      width: screenWidth*0.31,
+                      color:  Color.fromARGB(255, 61, 64, 73),
+                       child: Column(
+                        children: [
+                          // SizedBox(
+                          //   height: screenHeight*0.04,
+                          // ),
+                          Icon(Icons.person_2_rounded,size: 40,color: Colors.red,),
+                          Text("20",style: TextStyle(color: Colors.white),),
+                                                      Text('EMI',style: TextStyle(color: Colors.white),),
+                          Text('Closed',style: TextStyle(color: Colors.white),)
+
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(left:12.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: screenHeight*0.2,
-                        width: screenWidth*0.31,
-                        color: Color.fromARGB(255, 61, 64, 73),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: screenHeight*0.04,
-                            ),
-                            Icon(Icons.person_2_rounded,size: 40,color: Colors.white,),
-                            Text("20",style: TextStyle(color: Colors.white),),
-                            Text('Total Customers',style: TextStyle(color: Colors.white),)
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: screenHeight*0.2,
-                        width: screenWidth*0.31,
-                        color: Color.fromARGB(255, 61, 64, 73),
-                         child: Column(
-                          children: [
-                            SizedBox(
-                              height: screenHeight*0.04,
-                            ),
-                            Icon(Icons.person_2_rounded,size: 40,color: Colors.green,),
-                            Text("20",style: TextStyle(color: Colors.white),),
-                            Text('Active Customers',style: TextStyle(color: Colors.white),)
-                          ],
-                        ),
-                  
-                      ),
-                      Container(
-                        height: screenHeight*0.2,
-                        width: screenWidth*0.31,
-                        color:  Color.fromARGB(255, 61, 64, 73),
-                         child: Column(
-                          children: [
-                            SizedBox(
-                              height: screenHeight*0.04,
-                            ),
-                            Icon(Icons.person_2_rounded,size: 40,color: Colors.red,),
-                            Text("20",style: TextStyle(color: Colors.white),),
-                            Text('EMI Closed',style: TextStyle(color: Colors.white),)
-                          ],
-                        ),
-                      )
-                    ],
+            ),
+            SizedBox(
+                            height: 10,
+          
+                          ),
+                    Container(
+                      child:Column(
+                        children: [
+                          
+                          
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              // SizedBox(
+                              //   width: 25,
+                              // ),
+                              InkWell(
+                                child: Container( 
+                                  
+                                    // height: screenHeight*0.6,
+                                    //                     width: screenWidth*0.9,
+                                                        decoration: 
+                                                        finalbool==true?
+                                                        BoxDecoration():
+                                                        
+                                                        BoxDecoration(
+                                                   
+                                                    color: Colors.white,
+                                                   
+                                                    borderRadius: BorderRadius.only(
+                                                        topLeft: Radius.circular(10),
+                                                        topRight: Radius.circular(10),
+                                                        bottomLeft: Radius.circular(10),
+                                                        bottomRight: Radius.circular(10)),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey.withOpacity(0.3),
+                                                        spreadRadius: 3,
+                                                        blurRadius: 3,
+                                                        offset: Offset(
+                                                            0, 1), // changes position of shadow
+                                                      ),
+          
+                                                    ],
                   ),
-                ),
-              ),
-              SizedBox(
-                              height: 20,
-            
-                            ),
-                      Container(
-                        child:Column(
-                          children: [
-                            
-                            
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                // SizedBox(
-                                //   width: 25,
-                                // ),
-                                InkWell(
-                                  child: Container( 
-                                    
-                                      // height: screenHeight*0.6,
-                                      //                     width: screenWidth*0.9,
-                                                          decoration: 
-                                                          finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                          BoxDecoration(
-                                                     
-                                                      color: Colors.white,
-                                                     
-                                                      borderRadius: BorderRadius.only(
-                                                          topLeft: Radius.circular(10),
-                                                          topRight: Radius.circular(10),
-                                                          bottomLeft: Radius.circular(10),
-                                                          bottomRight: Radius.circular(10)),
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          color: Colors.grey.withOpacity(0.3),
-                                                          spreadRadius: 3,
-                                                          blurRadius: 3,
-                                                          offset: Offset(
-                                                              0, 1), // changes position of shadow
-                                                        ),
-            
-                                                      ],
-                    ),
-                   
-                                    height: screenHeight*0.15,
-                                          width: screenWidth*0.25,
-                                    child: Column(
-                                      children: [
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                       Container(
-                                          height: screenHeight*0.1,
-                                          width: screenWidth*0.2,
-                                          
-                                          decoration: BoxDecoration(
-                                             borderRadius: BorderRadius.circular(8.0),
-                                             color: Colors.blue,
-                                             
-                                            
-                                          ),
-                                          child: Column(
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.all(5.0),
-                                                child: Icon(Icons.calculate_sharp,size: 65,color: Colors.white,),
-                                              )
-                                            ],
-                                          ),
-                                          
-                                          
-    
-                                          
-                                        ),
-                                        SizedBox(
-                                          height:4,
-                                        ),
-                                        Text('EMI Calculator',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                
+                 
+                                  height: screenHeight*0.12,
+                                        width: screenWidth*0.25,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 7,
+                                      ),
+                                     Container(
+                                        height: screenHeight*0.07,
+                                        width: screenWidth*0.2,
                                         
-                                      ],
-                                    ),
-                                  ),
-                                  onTap: (){
-    
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => EMIcalculator(),));
-                                  },
-                                ),
-                                InkWell(
-                                  child: Container( 
-                                    
-                                      // height: screenHeight*0.6,
-                                      //                     width: screenWidth*0.9,
-                                                          decoration:
-                                                          
-                                                          finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                           BoxDecoration(
-                                                     
-                                                      color: Colors.white,
-                                                     
-                                                      borderRadius: BorderRadius.only(
-                                                          topLeft: Radius.circular(10),
-                                                          topRight: Radius.circular(10),
-                                                          bottomLeft: Radius.circular(10),
-                                                          bottomRight: Radius.circular(10)),
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          color: Colors.grey.withOpacity(0.3),
-                                                          spreadRadius: 3,
-                                                          blurRadius: 3,
-                                                          offset: Offset(
-                                                              0, 1), // changes position of shadow
-                                                        ),
-            
-                                                      ],
-                    ),
-                   
-                                    height: screenHeight*0.15,
-                                          width: screenWidth*0.25,
-                                    child: Column(
-                                      children: [
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Container(
-                                          height: screenHeight*0.1,
-                                          width: screenWidth*0.2,
-                                          
-                                          decoration: BoxDecoration(
-                                             borderRadius: BorderRadius.circular(8.0),
-                                             color: Colors.blue,
-                                             
-                                            
-                                          ),
-                                          child: Column(
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.all(10.0),
-                                                child: Icon(Icons.person_add,size: 50,color: Colors.white,),
-                                              )
-                                            ],
-                                          ),
-                                          
-                                          
+                                        decoration: BoxDecoration(
+                                           borderRadius: BorderRadius.circular(8.0),
+                                           color: Colors.blue,
+                                           
                                           
                                         ),
-                                        SizedBox(
-                                          height:4,
+                                        child: Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(5.0),
+                                              child: Icon(Icons.calculate_sharp,size: 40,color: Colors.white,),
+                                            )
+                                          ],
                                         ),
-                                        Text('Add Customer',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                
                                         
-                                      ],
-                                    ),
+                                        
+    
+                                        
+                                      ),
+                                      // SizedBox(
+                                      //   height:4,
+                                      // ),
+                                      Text('EMI Calculator',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              
+                                      
+                                    ],
                                   ),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => AddCustomer(),));
-                                  },
                                 ),
+                                onTap: (){
+    
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => EMIcalculator(),));
+                                },
+                              ),
+                              InkWell(
+                                child: Container( 
+                                  
+                                    // height: screenHeight*0.6,
+                                    //                     width: screenWidth*0.9,
+                                                        decoration:
+                                                        
+                                                        finalbool==true?
+                                                        BoxDecoration():
+                                                        
+                                                         BoxDecoration(
+                                                   
+                                                    color: Colors.white,
+                                                   
+                                                    borderRadius: BorderRadius.only(
+                                                        topLeft: Radius.circular(10),
+                                                        topRight: Radius.circular(10),
+                                                        bottomLeft: Radius.circular(10),
+                                                        bottomRight: Radius.circular(10)),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey.withOpacity(0.3),
+                                                        spreadRadius: 3,
+                                                        blurRadius: 3,
+                                                        offset: Offset(
+                                                            0, 1), // changes position of shadow
+                                                      ),
+          
+                                                    ],
+                  ),
+                 
+                                  height: screenHeight*0.12,
+                                        width: screenWidth*0.25,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 7,
+                                      ),
+                                      Container(
+                                        height: screenHeight*0.07,
+                                        width: screenWidth*0.2,
+                                        
+                                        decoration: BoxDecoration(
+                                           borderRadius: BorderRadius.circular(8.0),
+                                           color: Colors.blue,
+                                           
+                                          
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(10.0),
+                                              child: Icon(Icons.person_add,size: 32,color: Colors.white,),
+                                            )
+                                          ],
+                                        ),
+                                        
+                                        
+                                        
+                                      ),
+                                      // SizedBox(
+                                      //   height:4,
+                                      // ),
+                                      Text('Add Customer',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              
+                                      
+                                    ],
+                                  ),
+                                ),
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddCustomer(),));
+                                },
+                              ),
     
     
     
     
-                                InkWell(
+                              InkWell(
       child: Container(
       decoration: 
       finalbool==true?
-                                                          BoxDecoration():
+                                                        BoxDecoration():
       
       BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 3,
-            blurRadius: 3,
-            offset: Offset(0, 1),
-          ),
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.3),
+          spreadRadius: 3,
+          blurRadius: 3,
+          offset: Offset(0, 1),
+        ),
         ],
       ),
-      height: screenHeight * 0.15,
+      height: screenHeight * 0.12,
       width: screenWidth * 0.25,
       child: Stack(
         children: [
-          Column(
-            children: [
-              SizedBox(
-                height: 10,
-                // width: 20,
-              ),
-              Center(
-                child: Container(
-                  height: screenHeight * 0.1,
-                  width: screenWidth * 0.2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: Colors.blue,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.pending_actions_rounded,
-                          size: 60,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+        Column(
+          children: [
+            SizedBox(
+              height: 7,
+              // width: 20,
+            ),
+            Center(
+              child: Container(
+                height: screenHeight * 0.07,
+                width: screenWidth * 0.2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  color: Colors.blue,
                 ),
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Text('Approval Pending', style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold)),
-            ],
-          ),
-    
-    
-    
-          approvependingnumber==null?
-          Container(
-    
-          ):
-    
-    
-          Positioned(
-            top: 5,
-            left: 5, // Updated to place it in the top-left corner
-            child: Container(
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                color: Colors.red, // Color of the badge
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-                approvependingnumber, // You can replace this with your actual notification count
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.pending_actions_rounded,
+                        size: 35,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            // SizedBox(
+            //   height: 4,
+            // ),
+            Text('Approval Pending', style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold)),
+          ],
+        ),
+    
+    
+    
+        approvependingnumber==null?
+        Container(
+    
+        ):
+    
+    
+        Positioned(
+          top: 5,
+          left: 5, // Updated to place it in the top-left corner
+          child: Container(
+            padding: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Colors.red, // Color of the badge
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              approvependingnumber, // You can replace this with your actual notification count
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+              ),
+            ),
           ),
+        ),
         ],
       ),
       ),
@@ -532,103 +537,103 @@ ThemeData _darkTheme = ThemeData(
     
     
     
-                              ],
-                            ),
+                            ],
+                          ),
     
     
     
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                // SizedBox(
-                                //   width: 25,
-                                // ),
-                                InkWell(
-                                  child: Container( 
-                                    
-                                      // height: screenHeight*0.6,
-                                      //                     width: screenWidth*0.9,
-                                                          decoration:
-                                                          
-                                                          finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                           BoxDecoration(
-                                                     
-                                                      color: Colors.white,
-                                                     
-                                                      borderRadius: BorderRadius.only(
-                                                          topLeft: Radius.circular(10),
-                                                          topRight: Radius.circular(10),
-                                                          bottomLeft: Radius.circular(10),
-                                                          bottomRight: Radius.circular(10)),
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          color: Colors.grey.withOpacity(0.3),
-                                                          spreadRadius: 3,
-                                                          blurRadius: 3,
-                                                          offset: Offset(
-                                                              0, 1), // changes position of shadow
-                                                        ),
-            
-                                                      ],
-                    ),
-                   
-                                    height: screenHeight*0.15,
-                                          width: screenWidth*0.25,
-                                    child: Column(
-                                      children: [
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                       Container(
-                                          height: screenHeight*0.1,
-                                          width: screenWidth*0.2,
-                                          
-                                          decoration: BoxDecoration(
-                                             borderRadius: BorderRadius.circular(8.0),
-                                             color: Colors.white,
-                                             
-                                            
-                                          ),
-                                          child: Column(
-                                            children: [
-                                              Icon(Icons.qr_code_scanner,size: 60,color: Colors.green,),
-    
-                                              Text('Enroll Now',style: TextStyle(fontSize: 10,color: Colors.black),),
-                                              SizedBox(height: 2,),
-                                              Text('Approved Cus',style: TextStyle(fontSize: 10),)
-                                        //       Row(
-                                        //   children: [
-                                        //     Flexible(child: Text('Approved Customer',style: TextStyle(fontSize: 10),)),
-                                        //   ],
-                                        // ),
-                                            ],
-                                          ),
-                                          
-                                          
-                                          
-                                        ),
-                                        // SizedBox(
-                                        //   height:4,
-                                        // ),
-                                        // Row(
-                                        //   children: [
-                                        //     Flexible(child: Text('Approved Customer',style: TextStyle(fontSize: 10),)),
-                                        //   ],
-                                        // ),
-                                
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              // SizedBox(
+                              //   width: 25,
+                              // ),
+                              InkWell(
+                                child: Container( 
+                                  
+                                    // height: screenHeight*0.6,
+                                    //                     width: screenWidth*0.9,
+                                                        decoration:
+                                                        
+                                                        finalbool==true?
+                                                        BoxDecoration():
+                                                        
+                                                         BoxDecoration(
+                                                   
+                                                    color: Colors.white,
+                                                   
+                                                    borderRadius: BorderRadius.only(
+                                                        topLeft: Radius.circular(10),
+                                                        topRight: Radius.circular(10),
+                                                        bottomLeft: Radius.circular(10),
+                                                        bottomRight: Radius.circular(10)),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey.withOpacity(0.3),
+                                                        spreadRadius: 3,
+                                                        blurRadius: 3,
+                                                        offset: Offset(
+                                                            0, 1), // changes position of shadow
+                                                      ),
+          
+                                                    ],
+                  ),
+                 
+                                  height: screenHeight*0.12,
+                                        width: screenWidth*0.25,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 7,
+                                      ),
+                                     Container(
+                                        height: screenHeight*0.07,
+                                        width: screenWidth*0.2,
                                         
-                                      ],
-                                    ),
+                                        decoration: BoxDecoration(
+                                           borderRadius: BorderRadius.circular(8.0),
+                                           color: Colors.white,
+                                           
+                                          
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Icon(Icons.qr_code_scanner,size: 35,color: Colors.green,),
+    
+                                            Text('Enroll Now',style: TextStyle(fontSize: 10,color: Colors.black),),
+                                            SizedBox(height: 2,),
+                                            Text('Approved Cus',style: TextStyle(fontSize: 10),)
+                                      //       Row(
+                                      //   children: [
+                                      //     Flexible(child: Text('Approved Customer',style: TextStyle(fontSize: 10),)),
+                                      //   ],
+                                      // ),
+                                          ],
+                                        ),
+                                        
+                                        
+                                        
+                                      ),
+                                      // SizedBox(
+                                      //   height:4,
+                                      // ),
+                                      // Row(
+                                      //   children: [
+                                      //     Flexible(child: Text('Approved Customer',style: TextStyle(fontSize: 10),)),
+                                      //   ],
+                                      // ),
+                              
+                                      
+                                    ],
                                   ),
-                                  onTap: (){
-            
-                                  },
                                 ),
+                                onTap: (){
+          
+                                },
+                              ),
     
     
     
@@ -639,90 +644,90 @@ ThemeData _darkTheme = ThemeData(
     
     
     
-                                InkWell(
+                              InkWell(
       child: Container(
       decoration: 
       
       finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                          BoxDecoration(
+                                                        BoxDecoration():
+                                                        
+                                                        BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 3,
-            blurRadius: 3,
-            offset: Offset(0, 1),
-          ),
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.3),
+          spreadRadius: 3,
+          blurRadius: 3,
+          offset: Offset(0, 1),
+        ),
         ],
       ),
-      height: screenHeight * 0.15,
+      height: screenHeight * 0.12,
       width: screenWidth * 0.25,
       child: Stack(
         children: [
-          Column(
-            children: [
-              SizedBox(
-                height: 10,
-                // width: 20,
-              ),
-              Center(
-                child: Container(
-                  height: screenHeight * 0.1,
-                  width: screenWidth * 0.2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: Colors.blue,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.people_alt_outlined,
-                          size: 60,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+        Column(
+          children: [
+            SizedBox(
+              height: 7,
+              // width: 20,
+            ),
+            Center(
+              child: Container(
+                height: screenHeight * 0.07,
+                width: screenWidth * 0.2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  color: Colors.blue,
                 ),
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Text('Customer List', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
-            ],
-          ),
-    
-    
-    
-          customerlistnumber==null?
-          Container(
-    
-          ):
-    
-    
-          Positioned(
-            top: 5,
-            left: 5, // Updated to place it in the top-left corner
-            child: Container(
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                color: Colors.red, // Color of the badge
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-                customerlistnumber, // You can replace this with your actual notification count
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.people_alt_outlined,
+                        size: 35,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            // SizedBox(
+            //   height: 4,
+            // ),
+            Text('Customer List', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
+          ],
+        ),
+    
+    
+    
+        customerlistnumber==null?
+        Container(
+    
+        ):
+    
+    
+        Positioned(
+          top: 5,
+          left: 5, // Updated to place it in the top-left corner
+          child: Container(
+            padding: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Colors.red, // Color of the badge
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              customerlistnumber, // You can replace this with your actual notification count
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+              ),
+            ),
           ),
+        ),
         ],
       ),
       ),
@@ -748,90 +753,90 @@ ThemeData _darkTheme = ThemeData(
     
     
     
-                                InkWell(
+                              InkWell(
       child: Container(
       decoration: 
       
       finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                          BoxDecoration(
+                                                        BoxDecoration():
+                                                        
+                                                        BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 3,
-            blurRadius: 3,
-            offset: Offset(0, 1),
-          ),
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.3),
+          spreadRadius: 3,
+          blurRadius: 3,
+          offset: Offset(0, 1),
+        ),
         ],
       ),
-      height: screenHeight * 0.15,
+      height: screenHeight * 0.12,
       width: screenWidth * 0.25,
       child: Stack(
         children: [
-          Column(
-            children: [
-              SizedBox(
-                height: 10,
-                // width: 20,
-              ),
-              Center(
-                child: Container(
-                  height: screenHeight * 0.1,
-                  width: screenWidth * 0.2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: Colors.blue,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.miscellaneous_services_rounded,
-                          size: 60,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+        Column(
+          children: [
+            SizedBox(
+              height: 7,
+              // width: 20,
+            ),
+            Center(
+              child: Container(
+                height: screenHeight * 0.07,
+                width: screenWidth * 0.2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  color: Colors.blue,
                 ),
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Text('Service enquiry', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
-            ],
-          ),
-    
-    
-    
-          servicenumber==null?
-          Container(
-    
-          ):
-    
-    
-          Positioned(
-            top: 5,
-            left: 5, // Updated to place it in the top-left corner
-            child: Container(
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                color: Colors.red, // Color of the badge
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-                servicenumber, // You can replace this with your actual notification count
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.miscellaneous_services_rounded,
+                        size: 35,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            SizedBox(
+              height: 4,
+            ),
+            Text('Service enquiry', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
+          ],
+        ),
+    
+    
+    
+        servicenumber==null?
+        Container(
+    
+        ):
+    
+    
+        Positioned(
+          top: 5,
+          left: 5, // Updated to place it in the top-left corner
+          child: Container(
+            padding: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Colors.red, // Color of the badge
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              servicenumber, // You can replace this with your actual notification count
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+              ),
+            ),
           ),
+        ),
         ],
       ),
       ),
@@ -853,112 +858,113 @@ ThemeData _darkTheme = ThemeData(
     // In this modified code:
     
     // I added a Stack widget to overlap the notification badge on top of the existing container's content.
-          
-          
-          
-          
-          
-          
-                                
-                              ],
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                // SizedBox(
-                                //   width: 25,
-                                // ),
-                                InkWell(
+        
+        
+        
+        
+        
+        
+                              
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              // SizedBox(
+                              //   width: 25,
+                              // ),
+                              InkWell(
       child: Container(
       decoration: 
       
       finalbool==true?
-                                                          BoxDecoration():
+                                                        BoxDecoration():
       BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 3,
-            blurRadius: 3,
-            offset: Offset(0, 1),
-          ),
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.3),
+          spreadRadius: 3,
+          blurRadius: 3,
+          offset: Offset(0, 1),
+        ),
         ],
       ),
-      height: screenHeight * 0.15,
+      height: screenHeight * 0.12,
       width: screenWidth * 0.25,
       child: Stack(
         children: [
-          Column(
-            children: [
-              SizedBox(
-                height: 10,
-                // width: 20,
-              ),
-              Center(
-                child: Container(
-                  height: screenHeight * 0.1,
-                  width: screenWidth * 0.2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: Colors.blue,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.wallet,
-                          size: 60,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+        Column(
+          children: [
+            SizedBox(
+              height: 7,
+              // width: 20,
+            ),
+            Center(
+              child: Container(
+                height: screenHeight * 0.07,
+                width: screenWidth * 0.2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  color: Colors.blue,
                 ),
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Text('Accounts', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
-            ],
-          ),
-    
-    
-    
-          accountsnumber==null?
-          Container(
-    
-          ):
-    
-    
-          Positioned(
-            top: 5,
-            left: 5, // Updated to place it in the top-left corner
-            child: Container(
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                color: Colors.red, // Color of the badge
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-               accountsnumber, // You can replace this with your actual notification count
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.wallet,
+                        size: 35,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            // SizedBox(
+            //   height: 4,
+            // ),
+            Text('Accounts', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
+          ],
+        ),
+    
+    
+    
+        accountsnumber==null?
+        Container(
+    
+        ):
+    
+    
+        Positioned(
+          top: 5,
+          left: 5, // Updated to place it in the top-left corner
+          child: Container(
+            padding: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Colors.red, // Color of the badge
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+             accountsnumber, // You can replace this with your actual notification count
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+              ),
+            ),
           ),
+        ),
         ],
       ),
       ),
       onTap: () {
       // Add your onTap functionality here
+      Navigator.push(context, MaterialPageRoute(builder: (context) => AccountsPage(),));
       },
     ),
     
@@ -970,68 +976,68 @@ ThemeData _darkTheme = ThemeData(
     
     
     
-                                InkWell(
+                              InkWell(
       child: Container(
       decoration:
       
     
       finalbool==true?
-                                                          BoxDecoration():
+                                                        BoxDecoration():
     
        BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 3,
-            blurRadius: 3,
-            offset: Offset(0, 1),
-          ),
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.3),
+          spreadRadius: 3,
+          blurRadius: 3,
+          offset: Offset(0, 1),
+        ),
         ],
       ),
-      height: screenHeight * 0.15,
+      height: screenHeight * 0.12,
       width: screenWidth * 0.25,
       child: Stack(
         children: [
-          Column(
-            children: [
-              SizedBox(
-                height: 10,
-                // width: 20,
-              ),
-              Center(
-                child: 
-                
-                Container(
-                  height: screenHeight * 0.1,
-                  width: screenWidth * 0.2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: Colors.blue,
-                    image: DecorationImage(image: AssetImage('assets/pay.png'))
+        Column(
+          children: [
+            SizedBox(
+              height: 7,
+              // width: 20,
+            ),
+            Center(
+              child: 
+              
+              Container(
+                height: screenHeight * 0.07,
+                width: screenWidth * 0.2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  color: Colors.blue,
+                  image: DecorationImage(image: AssetImage('assets/pay.png'))
     
-                  ),
-                  // child: Column(
-                  //   children: [
-    
-    
-                  //     Padding(
-                  //       padding: const EdgeInsets.all(8.0),
-                  //       child: Icon(
-                  //         Icons.wallet,
-                  //         size: 60,
-                  //         color: Colors.white,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
                 ),
+                // child: Column(
+                //   children: [
+    
+    
+                //     Padding(
+                //       padding: const EdgeInsets.all(8.0),
+                //       child: Icon(
+                //         Icons.wallet,
+                //         size: 60,
+                //         color: Colors.white,
+                //       ),
+                //     ),
+                //   ],
+                // ),
               ),
-              SizedBox(
-                height: 4,
-              ),
-              Text('Pay Now', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
+            ),
+            // SizedBox(
+            //   height: 4,
+            // ),
+            Text('Pay Now', style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
     
     
     
@@ -1039,35 +1045,35 @@ ThemeData _darkTheme = ThemeData(
     
     
     
-            ],
-          ),
+          ],
+        ),
     
     
     
-          paynownumber==null?
-          Container(
+        paynownumber==null?
+        Container(
     
-          ):
+        ):
     
     
-          Positioned(
-            top: 5,
-            left: 5, // Updated to place it in the top-left corner
-            child: Container(
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                color: Colors.red, // Color of the badge
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-             paynownumber, // You can replace this with your actual notification count
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                ),
+        Positioned(
+          top: 5,
+          left: 5, // Updated to place it in the top-left corner
+          child: Container(
+            padding: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Colors.red, // Color of the badge
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+           paynownumber, // You can replace this with your actual notification count
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
               ),
             ),
           ),
+        ),
         ],
       ),
       ),
@@ -1084,152 +1090,151 @@ ThemeData _darkTheme = ThemeData(
     
     
     
-                                InkWell(
-                                  child: Container( 
-                                    
-                                      // height: screenHeight*0.6,
-                                      //                     width: screenWidth*0.9,
-                                                          decoration:
-                                                          
-                                                          finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                           BoxDecoration(
-                                                     
-                                                      color: Colors.white,
-                                                     
-                                                      borderRadius: BorderRadius.only(
-                                                          topLeft: Radius.circular(10),
-                                                          topRight: Radius.circular(10),
-                                                          bottomLeft: Radius.circular(10),
-                                                          bottomRight: Radius.circular(10)),
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          color: Colors.grey.withOpacity(0.3),
-                                                          spreadRadius: 3,
-                                                          blurRadius: 3,
-                                                          offset: Offset(
-                                                              0, 1), // changes position of shadow
-                                                        ),
-            
-                                                      ],
-                    ),
-                   
-                                    height: screenHeight*0.15,
-                                          width: screenWidth*0.25,
-                                    child: Column(
-                                      children: [
-                                        SizedBox(
-                                          height: 10,
-                                          width: 20,
-                                        ),
-                                        Container(
-                                          height: screenHeight*0.1,
-                                          width: screenWidth*0.2,
-                                          
-                                          decoration: BoxDecoration(
-                                             borderRadius: BorderRadius.circular(8.0),
-                                             color: Colors.blue,
-                                             image: DecorationImage(image: AssetImage('assets/cus.png'))
-                                             
-                                            
-                                          ),
-                                          
-                                          
-                                          
-                                          
-                                        ),
-                                        SizedBox(
-                                          height:4,
-                                        ),
-                                        Text('Contact Us',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                
+                              InkWell(
+                                child: Container( 
+                                  
+                                    // height: screenHeight*0.6,
+                                    //                     width: screenWidth*0.9,
+                                                        decoration:
+                                                        
+                                                        finalbool==true?
+                                                        BoxDecoration():
+                                                        
+                                                         BoxDecoration(
+                                                   
+                                                    color: Colors.white,
+                                                   
+                                                    borderRadius: BorderRadius.only(
+                                                        topLeft: Radius.circular(10),
+                                                        topRight: Radius.circular(10),
+                                                        bottomLeft: Radius.circular(10),
+                                                        bottomRight: Radius.circular(10)),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey.withOpacity(0.3),
+                                                        spreadRadius: 3,
+                                                        blurRadius: 3,
+                                                        offset: Offset(
+                                                            0, 1), // changes position of shadow
+                                                      ),
+          
+                                                    ],
+                  ),
+                 
+                                  height: screenHeight*0.12,
+                                        width: screenWidth*0.25,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 7,
+                                        // width: 20,
+                                      ),
+                                      Container(
+                                        height: screenHeight*0.07,
+                                        width: screenWidth*0.2,
                                         
-                                      ],
-                                    ),
+                                        decoration: BoxDecoration(
+                                           borderRadius: BorderRadius.circular(8.0),
+                                           color: Colors.blue,
+                                           image: DecorationImage(image: AssetImage('assets/cus.png'))
+                                           
+                                          
+                                        ),
+                                        
+                                        
+                                        
+                                        
+                                      ),
+                                      // SizedBox(
+                                      //   height:4,
+                                      // ),
+                                      Text('Contact Us',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              
+                                      
+                                    ],
                                   ),
-                                  onTap: (){
-            
-                                  },
                                 ),
+                                onTap: (){
           
-          
-          
-          
-          
-          
-          
-                                
-                              ],
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
+                                },
+                              ),
+        
+        
+        
+        
+        
+        
+        
+                              
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
     
-            ],
-          )
-          
-          
+          ],
+        )
+        
+        
         ), 
         Container(
-                          height: screenHeight*0.3,
-                          width: screenWidth,
-                          child: CarouselSlider(items: [
-                                Container(
-                                  margin: EdgeInsets.all(6.0),
-                                  decoration: BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    image: DecorationImage(image:AssetImage('assets/hhhh.jpg'),fit: BoxFit.fill ),
-                                    
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.all(6.0),
-                                  decoration:
+                        height: screenHeight*0.25,
+                        width: screenWidth,
+                        child: CarouselSlider(items: [
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: DecorationImage(image:AssetImage('assets/hhhh.jpg'),fit: BoxFit.fill ),
                                   
-                                  finalbool==true?
-                                                          BoxDecoration():
-                                                          
-                                                           BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    image: DecorationImage(image:AssetImage('assets/first.jpg'),fit: BoxFit.fill ),
-                                    
-                                  ),
                                 ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration:
                                 
-                                Container(
-                                  margin: EdgeInsets.all(6.0),
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    image: DecorationImage(image:AssetImage('assets/second.jpg'),fit: BoxFit.fill ),
-                                    
-                                  ),
-                                ),Container(
-                                  margin: EdgeInsets.all(6.0),
-                                  decoration: BoxDecoration(
-                                    color: Colors.purple,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    image: DecorationImage(image:AssetImage('assets/third.jpg'),fit: BoxFit.fill ),
-                                    
-                                  ),
+                                finalbool==true?
+                                                        BoxDecoration():
+                                                        
+                                                         BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: DecorationImage(image:AssetImage('assets/first.jpg'),fit: BoxFit.fill ),
+                                  
                                 ),
-                              ],
-                              options: CarouselOptions(
-                                height: 180.0,
-                                enlargeCenterPage: true,
-                                autoPlay: true,
-                                aspectRatio: 16/9,
-                                autoPlayCurve: Curves.fastOutSlowIn,
-                                enableInfiniteScroll: true,
-                                autoPlayAnimationDuration: Duration(milliseconds: 800),
-                              ),),
-                        ),
-                       
-            ]
-          ),
+                              ),
+                              
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: DecorationImage(image:AssetImage('assets/second.jpg'),fit: BoxFit.fill ),
+                                  
+                                ),
+                              ),Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.purple,
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: DecorationImage(image:AssetImage('assets/third.jpg'),fit: BoxFit.fill ),
+                                  
+                                ),
+                              ),
+                            ],
+                            options: CarouselOptions(
+                              height: 180.0,
+                              enlargeCenterPage: true,
+                              autoPlay: true,
+                              aspectRatio: 16/9,
+                              autoPlayCurve: Curves.fastOutSlowIn,
+                              enableInfiniteScroll: true,
+                              autoPlayAnimationDuration: Duration(milliseconds: 800),
+                            ),),
+                      ),
+                     
+          ]
         )
         
       )),
